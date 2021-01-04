@@ -1,0 +1,47 @@
+menu "Example Configuration"
+
+config ROUTER_SSID
+    string "Router SSID"
+        default "esp-liyin"
+        help
+            Router SSID.
+
+config ROUTER_PASSWORD
+    string "Router password"
+        default "espressif"
+        help
+            Router password.
+
+config MESH_ID
+    string "Mesh ID"
+        default "123456"
+        help
+            Mesh network identification, Nodes with the same mesh ID can
+            communicate with each other.
+
+config MESH_PASSWORD
+    string "Mesh Password"
+    default "MESH_PASSWORD"
+    help
+        Mesh AP password. Password length must be 8 bits smaller than 64 bits,Set to null to not encrypt
+
+config MQTT_URL
+    string "MQTT broker URL"
+    default "mqtt://192.168.1.208:1883"
+    help
+        URL of the broker to connect to
+
+config DEVICE_VERSION
+    string "Device version"
+    default "0.0.1"
+    help
+        Config device version
+
+config FIRMWARE_UPGRADE_URL
+    string "Firmware upgrade url endpoint"
+    default "http://192.168.0.3:8070/hello-world.bin"
+    help
+        URL of server which hosts the firmware image.
+
+
+endmenu
